@@ -13,3 +13,11 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
+
+.masthead h2 {
+    color: #ffffff;
+}
+
+#about {
+    background: #2D2D2D;
+}
