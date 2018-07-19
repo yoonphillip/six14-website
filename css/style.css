@@ -9,7 +9,7 @@
     font-family: 'Roboto';
     /* font-weight: bold; */
     letter-spacing: 4px;
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
