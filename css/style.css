@@ -1,34 +1,84 @@
-.logo {
-    top: 0;
-    bottom: 0;
-    padding-right: 10px;
-    vertical-align: middle;
+/* Required height of parents of the Full Page Carousel for proper displaying carousel itself */
+html,
+body,
+.view {
+  height: 100%; }
+
+body {
+  background: #ffffff;
+  font-family: 'Muli';
 }
 
-.masthead h1 {
-    font-family: 'Roboto';
-    /* font-weight: bold; */
-    letter-spacing: 4px;
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
+/* Full Page Carousel itself*/
+.carousel {
+  height: 100%; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
 
-.masthead h2 {
-    color: #ffffff;
-    opacity: 0.8;
+/* Navbar animation */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.top-nav-collapse {
+  background-color: #1C2331; }
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #1C2331; }
+
+#logo-image {
+  height: 1.1em;
+  padding-right: 4px;
+  vertical-align: middle;
+  display: inline-block;
 }
 
-#about {
-    background: #292929;
+.main-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  padding-bottom: 8px;
+}
+#main-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
 
-.carousel-item {
-  height: 100vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.intro-six14 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.welcome-blurb {
+  text-align: center;
+}
+
+.bible-verse {
+  float: right;
+  text-align: right;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, .header-font {
+  font-family: "Lato";
+}
+
+.fun {
+  color: #2ebdf6;
+}
+
+.btn-primary {
+  color: #2ebdf6;
 }
