@@ -53,7 +53,10 @@
 
 body {
     margin: 0;
-    font-family: Arial;
+}
+
+nav {
+    z-index: 500;
 }
 
 .header {
@@ -82,12 +85,88 @@ body {
     vertical-align: middle;
 }
 
+.img-responsive {
+    margin-top: 0px !important;
+}
+
+.modal-body {
+    padding: 0rem !important;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay img {
+  opacity: 1;
+  display: block;
+  height: 100%;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.overlay:hover img {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.overlay:hover .middle {
+  opacity: 1;
+}
+
+.modal-open {
+    padding-right: 0px !important;
+    overflow-y: auto;
+}
+
+.navbar {
+    padding-right: 0px !important;
+}
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
+    }
+
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
     }
 }
 
@@ -98,6 +177,32 @@ body {
         flex: 100%;
         max-width: 100%;
     }
+
+    .overlay img.resize {
+        width:200px; /* you can use % */
+        height: auto;
+    }
+
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 0px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
   </style>
@@ -111,7 +216,7 @@ body {
 
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
-        <strong class="nav-text"><img class="logo" src="./media/white.png" href="index.html" id="logo-image">
+        <strong class="nav-text"><img class="logo" data-echo="./media/white.png" href="index.html" id="logo-image">
         Six14 Christian Dance Company</strong>
       </a>
 
@@ -135,13 +240,13 @@ body {
           <li class="nav-item">
             <a class="nav-link" href="company.html">Company</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shows.html">Shows</a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="shows.html">Shows
+            <a class="nav-link" href="gallery.html">Gallery
                 <span class="sr-only">(current)</span>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -207,40 +312,61 @@ body {
             <!-- Photo Grid -->
             <div class="row"> 
                 <div class="column">
-                    <img src="media/people/20_jonah.jpg" style="width:100%">
-                    <img src="media/2017.jpg" style="width:100%">
-                    <img src="media/about.jpg" style="width:100%">
-                    <img src="media/people/20_jessica.jpg" style="width:100%">
-                    <img src="media/bible.jpg" style="width:100%">
-                    <img src="media/blue.jpg" style="width:100%">
+                    <div class="overlay">
+                        <img data-echo="media/people/20_jonah.jpg" style="width:100%" data-toggle="modal" data-target="#myModal">
+                        <div class="middle"></div>
+                    </div>
+                    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img data-echo="media/people/20_jonah.jpg" style="width:100%" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img data-echo="media/2017.jpg" style="width:100%">
+                    <img data-echo="media/about.jpg" style="width:100%">
+                    <img data-echo="media/people/20_jessica.jpg" style="width:100%">
+                    <img data-echo="media/bible.jpg" style="width:100%">
+                    <img data-echo="media/blue.jpg" style="width:100%">
                 </div>
                 <div class="column">
-                    <img src="media/contact.jpg" style="width:100%">
-                    <img src="media/people/20_janet.jpg" style="width:100%">
-                    <img src="media/homepage_boys.jpg" style="width:100%">
-                    <img src="media/homepage_nathan.jpg" style="width:100%">
-                    <img src="media/people/20_josh.jpg" style="width:100%">
-                    <img src="media/index.jpg" style="width:100%">
+                    <img data-echo="media/contact.jpg" style="width:100%" data-toggle="modal" data-target="#contact">
+                    <div id="contact" class="modal fade" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img data-echo="media/contact.jpg" style="width:100%" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <img data-echo="media/people/20_janet.jpg" style="width:100%">
+                    <img data-echo="media/homepage_boys.jpg" style="width:100%">
+                    <img data-echo="media/homepage_nathan.jpg" style="width:100%">
+                    <img data-echo="media/people/20_josh.jpg" style="width:100%">
+                    <img data-echo="media/index.jpg" style="width:100%">
                 </div>  
                 <div class="column">
-                    <img src="media/kneeling.jpg" style="width:100%">
-                    <img src="media/people/20_moses.jpg" style="width:100%">
-                    <img src="media/marisa.jpg" style="width:100%">
-                    <img src="media/media.jpg" style="width:100%">
-                    <img src="media/naenae.jpg" style="width:100%">
-                    <img src="media/rae.jpg" style="width:100%">
-                    <img src="media/happy.jpg" style="width:100%">
-                    <img src="media/highfive.jpg" style="width:100%">
+                    <img data-echo="media/kneeling.jpg" style="width:100%">
+                    <img data-echo="media/people/20_moses.jpg" style="width:100%">
+                    <img data-echo="media/marisa.jpg" style="width:100%">
+                    <img data-echo="media/media.jpg" style="width:100%">
+                    <img data-echo="media/naenae.jpg" style="width:100%">
+                    <img data-echo="media/rae.jpg" style="width:100%">
+                    <img data-echo="media/happy.jpg" style="width:100%">
+                    <img data-echo="media/highfive.jpg" style="width:100%">
                     
                 </div>
                 <div class="column">
-                    <img src="media/black.png" style="width:100%">
-                    <img src="media/six14.jpg" style="width:100%">
-                    <img src="media/people/20_phillip.jpg" style="width:100%">
-                    <img src="media/company-page.jpg" style="width:100%">
-                    <img src="media/company.jpg" style="width:100%">
-                    <img src="media/people/20_sarah.jpg" style="width:100%">
-                    <img src="media/jessica.jpg" style="width:100%">
+                    <img data-echo="media/black.png" style="width:100%">
+                    <img data-echo="media/six14.jpg" style="width:100%">
+                    <img data-echo="media/people/20_phillip.jpg" style="width:100%">
+                    <img data-echo="media/company-page.jpg" style="width:100%">
+                    <img data-echo="media/company.jpg" style="width:100%">
+                    <img data-echo="media/people/20_sarah.jpg" style="width:100%">
+                    <img data-echo="media/jessica.jpg" style="width:100%">
                 </div>
             </div>
         </section>
@@ -293,6 +419,21 @@ body {
     // Animations initialization
     new WOW().init();
   </script>
+
+<script src="js/echo.js"></script>
+<script>
+echo.init({
+  offset: 100,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {
+    console.log(element, 'has been', op + 'ed')
+  }
+});
+
+// echo.render(); is also available for non-scroll callbacks
+</script>
+
 </body>
 
 </html>
