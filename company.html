@@ -49,7 +49,7 @@
 
 .column {
   float: left;
-  width: 24%;
+  width: 20%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
@@ -113,8 +113,14 @@ nav {
 }
 
 .name {
-    padding: 10px 0px 0px 0px;
+    font-size: 16px;
     text-align: center;
+}
+
+.position {
+    font-size:12px;
+    text-align: center;
+    color: grey;
 }
 
 .nameNoTitle {
@@ -151,7 +157,7 @@ h1 {
 
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
-        <strong class="nav-text"><img class="logo" src="./media/white.png" href="index.html" id="logo-image">
+        <strong class="nav-text"><img class="logo" data-echo="./media/white.png" href="index.html" id="logo-image">
         Six14 Christian Dance Company</strong>
       </a>
 
@@ -215,7 +221,7 @@ h1 {
   <!-- Navbar -->
 
   <!-- Full Page Intro -->
-  <div class="view" style="background-image: url('media/company-page.jpg'); opacity: 0.9; background-repeat: no-repeat; background-size: cover;">
+  <div class="view" style="background-image: url('media/company-web.jpg'); opacity: 0.9; background-repeat: no-repeat; background-size: cover;">
 
     <!-- Mask & flexbox options-->
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -243,161 +249,141 @@ h1 {
       <!--Section: Main features & Quick Start-->
       <section class="mt-5 wow fadeIn">
 
-            <h3 class="h3 text-center mb-5">Graduate Students</h3>
             <div class="row">
                 <div class="column">
-                <div class="card grow" data-toggle="modal">
-                    <img src="media/people/GS_allison.jpg" alt="Janet" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Allison Chang</h4>
-                    <p class="title"></p>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/18_karis_cropped.jpg" style="width:100%">
+                    <div class="name">Karis Cha '18</div>
                 </div>
                 </div>
                 <div class="column">
-                <div class="card grow" data-toggle="modal">
-                    <img src="media/people/GS_joane.jpg" alt="Janet" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Joane Joseph</h4>
-                    </div>
-                </div>
-                </div>
-            </div>  
-            <br>
-            <h3 class="h3 text-center mb-5">Class of 2020</h3>
-            <div class="row">
-                <div class="column">
-                <div class="card grow" data-toggle="modal" data-target="#exampleModal">
-                    <img src="media/people/20_janet.jpg" alt="Janet" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Janet Lee</h4>
-                    <p class="title">Publicist & Webmaster</p>
-                    </div>
-                </div>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-3">
-                                    <img src="media/silly/silly_janet.jpg"/>                       
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <h1>
-                                        About Janet 
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </h1>
-                                    
-                                    <p>Cupcake ipsum dolor sit amet. Sweet roll sweet roll dessert topping jelly gummies biscuit oat cake. Dessert muffin pastry cheesecake bonbon pudding caramel.</p>
-                                    <p>Sesame snaps soufflé bear claw oat cake candy gummi bears pastry wafer. Icing gingerbread ice cream jujubes bonbon powder. Cake jelly-o dragée pudding powder. Cupcake fruitcake cookie cake chocolate bar lemon drops bear claw cheesecake candy.</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                
-            
-                <div class="column">
-                <div class="card grow">
-                    <img src="media/people/20_jessica.jpg" alt="Jessica" style="width:100%">
-                    <div class="container">
-                    <h4 class="nameNoTitle">Jessica Fan</h4>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/GS_allison_cropped.jpg" style="width:100%">
+                    <div class="name">Allison Chang '18</div>
                 </div>
                 </div>
                 <div class="column">
-                <div class="card grow">
-                    <img src="media/people/20_jonah.jpg" alt="Jonah" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Jonah Ng</h4>
-                    <p class="title">Social Chair</p>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/18_taylor_cropped.jpg" style="width:100%">
+                    <div class="name">Taylor Chin '18</div>
                 </div>
                 </div>
                 <div class="column">
-                <div class="card grow">
-                    <img src="media/people/20_josh.jpg" alt="Jonah" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Joshua Choi</h4>
-                    <p class="title">Vice President</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="column">
-                <div class="card grow">
-                    <img src="media/people/20_moses.jpg" alt="Janet" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Moses Im</h4>
-                    <p class="title">President</p>
-                    </div>
-                </div>
-                </div>
-            
-                <div class="column">
-                <div class="card grow">
-                    <img src="media/people/20_phillip.jpg" alt="Jessica" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Phillip Yoon</h4>
-                    <p class="title">Treasurer & Webmaster</p>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_josh_cropped.jpg" style="width:100%">
+                    <div class="name">Joshua Choi '20</div>
+                    <div class="position">Vice President</div>
                 </div>
                 </div>
                 <div class="column">
-                <div class="card grow">
-                    <img src="media/people/20_sarah.jpg" alt="Jonah" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Sarah Jun</h4>
-                    <p class="title">Costumes Chair</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <br>
-            <h3 class="h3 text-center mb-5">Class of 2021</h3>
-            <div class="row">
-                <div class="column">
-                <div class="card grow" data-toggle="modal">
-                    <img src="media/people/21_christina.jpg" alt="Janet" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Christina Moon</h4>
-                    <p class="title">Social Chair</p>
-                    </div>
-                </div>
-                </div>
-            
-                <div class="column">
-                <div class="card grow">
-                    <img src="media/people/21_danielkwak.jpg" alt="Jessica" style="width:100%">
-                    <div class="container">
-                    <h4 class="nameNoTitle">Daniel Kwak</h4>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_jessica_cropped.jpg" style="width:100%">
+                    <div class="name">Jessica Fan '20</div>
                 </div>
                 </div>
                 <div class="column">
-                <div class="card grow">
-                    <img src="media/people/21_diana.jpg" alt="Jonah" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Diana Tang</h4>
-                    <p class="title">Artistic Director</p>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_moses_cropped.jpg" style="width:100%">
+                    <div class="name">Moses Im '20</div>
+                    <div class="position">President</div>
                 </div>
                 </div>
                 <div class="column">
-                <div class="card grow">
-                    <img src="media/people/21_nathan.jpg" alt="Jonah" style="width:100%">
-                    <div class="container">
-                    <h4 class="name">Nathan Rim</h4>
-                    <p class="title">Assistant Artistic Director</p>
-                    </div>
+                <div class="grow">
+                    <img data-echo="media/people_cropped/GS_joane_cropped.jpg" style="width:100%">
+                    <div class="name">Joane Joseph '16</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_sarah_cropped.jpg" style="width:100%">
+                    <div class="name">Sarah Jun '20</div>
+                    <div class="position">Costumes Chair</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/18_david_cropped.jpg" style="width:100%">
+                    <div class="name">David Kim '18</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/18_josh_cropped.jpg" style="width:100%">
+                    <div class="name">Josh Kim '18</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/21_daniel_cropped.jpg" style="width:100%">
+                    <div class="name">Daniel Kwak '21</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/18_soonho_cropped.jpg" style="width:100%">
+                    <div class="name">Soonho Kwon '18</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_janet_cropped.jpg" style="width:100%">
+                    <div class="name">Janet Lee '20</div>
+                    <div class="position">Publicity Chair & Webmaster</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/lizzie_cropped.jpg" style="width:100%">
+                    <div class="name">Elizabeth LeLievre</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/21_christina_cropped.jpg" style="width:100%">
+                    <div class="name">Christina Moon '21</div>
+                    <div class="position">Fellowship Chair</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_jonah_cropped.jpg" style="width:100%">
+                    <div class="name">Jonah Ng '20</div>
+                    <div class="position">Fellowship Chair</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/21_nathan_cropped.jpg" style="width:100%">
+                    <div class="name">Nathan Rim '21</div>
+                    <div class="position">Assistant Artistic Director</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/17_owen_cropped.jpg" style="width:100%">
+                    <div class="name">Owen Smitherman '17</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/21_diana_cropped.jpg" style="width:100%">
+                    <div class="name">Diana Tang '21</div>
+                    <div class="position">Artistic Director</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/21_jonathan_cropped.jpg" style="width:100%">
+                    <div class="name">Jonathan Wang '21</div>
+                    <div class="position">Assistant Artistic Director</div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="grow">
+                    <img data-echo="media/people_cropped/20_phillip_cropped.jpg" style="width:100%">
+                    <div class="name">Phillip Yoon '20</div>
+                    <div class="position">Treasurer & Webmaster</div>
                 </div>
                 </div>
             </div>
@@ -452,6 +438,20 @@ h1 {
     // Animations initialization
     new WOW().init();
   </script>
+
+<script src="js/echo.js"></script>
+<script>
+echo.init({
+  offset: 100,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {
+    console.log(element, 'has been', op + 'ed')
+  }
+});
+
+// echo.render(); is also available for non-scroll callbacks
+</script>
 </body>
 
 </html>
