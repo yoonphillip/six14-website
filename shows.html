@@ -10,12 +10,6 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato|Muli" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -47,6 +41,24 @@
             }
         }
 
+    @media all and (max-width: 436px) {
+        .header {
+            font-size: 16px;
+        }
+    }
+
+    @media all and (max-width: 376px) {
+        .header {
+            font-size: 14px;
+        }
+    }
+
+    @media all and (max-width: 346px) {
+        .header {
+            font-size: 12px;
+        }
+    }
+
 
 h1 {
     font-size:8vw;
@@ -64,7 +76,7 @@ h1 {
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
         <strong class="nav-text"><img class="logo" src="./media/white.png" href="index.html" id="logo-image">
-        Six14 Christian Dance Company</strong>
+            <span class="header">Six14 Christian Dance Company</span></strong>
       </a>
 
       <!-- Collapse -->

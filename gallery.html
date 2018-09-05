@@ -10,12 +10,6 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato|Muli" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -46,6 +40,24 @@
                 background: #1C2331!important;
             }
         }
+    
+    @media all and (max-width: 436px) {
+        .header {
+            font-size: 16px;
+        }
+    }
+
+    @media all and (max-width: 376px) {
+        .header {
+            font-size: 14px;
+        }
+    }
+
+    @media all and (max-width: 346px) {
+        .header {
+            font-size: 12px;
+        }
+    }
 
 * {
     box-sizing: border-box;
@@ -57,11 +69,6 @@ body {
 
 nav {
     z-index: 500;
-}
-
-.header {
-    text-align: center;
-    padding: 32px;
 }
 
 .row {
@@ -209,6 +216,10 @@ h1 {
     font-size:8vw;
 }
 
+.subtitle {
+    color: gray;
+}
+
   </style>
 </head>
 
@@ -221,7 +232,7 @@ h1 {
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
         <strong class="nav-text"><img class="logo" data-echo="./media/white.png" href="index.html" id="logo-image">
-        Six14 Christian Dance Company</strong>
+        <span class="header">Six14 Christian Dance Company</span></strong>
       </a>
 
       <!-- Collapse -->
@@ -308,13 +319,16 @@ h1 {
     <div class="container" id="about">
         <!--Section: Not enough-->
         <section class="mt-5 wow" id="about">
-            <h2 class="my-5 h3 text-center">New Creation | 2018</h2>
+            <h2 class="text-center">New Creation | 2018</h2>
+            <h6 class="text-center subtitle">Photography: Ji-Sung Kim</h2>
             <!-- Photo Grid -->
             <div class="row" id="2018"> 
 
             </div>
-
-            <h2 class="my-5 h3 text-center">Not My Own | 2017</h2>
+            <br>
+            <br>
+            <h2 class="text-center">Not My Own | 2017</h2>
+            <h6 class="text-center subtitle">Photography: Vincent Po & Lily Zhang</h2>
             <!-- Photo Grid -->
             <div class="row" id="2017"> 
                 
@@ -479,19 +493,6 @@ var files = {"2018": [
                         "media/gallery/2017/VPO051217082005.jpg"
                     ]};
 
-/*<div class="overlay">
-    <img data-echo="media/gallery/2017/IMG_3977.jpg" style="width:100%" data-toggle="modal" data-target="#IMG_3977">
-    <div class="middle"></div>
-</div>
-<div id="IMG_3977" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="media/gallery/2017/IMG_3977.jpg" style="width:100%" class="img-responsive">
-            </div>
-        </div>
-    </div>
-</div>*/
 
 for (var year in files) {
     var gallery = document.getElementById(year);
