@@ -4,10 +4,10 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Six14 Website <pyoon@princeton.edu>';
+$from = 'Six14 Website <six14@princeton.edu>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'President <pyoon@princeton.edu>';
+$sendTo = 'Tech Chair <kaixingc@princeton.edu>';
 
 // subject of the email
 $subject = 'New message from Six14 Website Contact Form!';
