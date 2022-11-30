@@ -51,6 +51,7 @@
         }
     }
 
+
         html {
   box-sizing: border-box;
 }
@@ -88,8 +89,7 @@ nav {
 }
 
 .container {
-  padding: 0 16px;
-
+  padding: 0px;
 }
 
 .container::after, .row::after {
@@ -99,7 +99,7 @@ nav {
 }
 
 .row {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -124,25 +124,64 @@ nav {
   background-color: #555;
 }
 
+.namecontainer {
+  position: relative;
+  width: 100%;
+}
+
 .name {
-    font-size: 16px;
-    text-align: center;
+  font-weight: 800;
+  letter-spacing: .1rem;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .position {
     font-size:12px;
+    font-weight: 300;
+    letter-spacing: .1rem;
     text-align: center;
-    color: grey;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.nameNoTitle {
+/* .nameNoTitle {
     padding: 20px 0px 20px 0px;
     text-align: center;
     margin: 0.4rem;
-}
+} */
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.03); }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #2e2a27;
+  color: white;
+  font-family: helvetica;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .namecontainer:hover img {
+  filter: blur(2px);
+} */
+
+.overlay:hover {
+  opacity: 0.65;
+}
+
+
 
 .modal-open {
     padding-right: 0px !important;
@@ -169,7 +208,7 @@ h1 {
 
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
-        <strong class="nav-text"><img class="logo" data-echo="./media/white.png" href="index.html" id="logo-image">
+        <strong class="nav-text"><img class="logo" src="./media/white.png" href="index.html" id="logo-image">
             <span class="header">Six14 Christian Dance Company</span></strong>
       </a>
 
@@ -213,7 +252,7 @@ h1 {
   <!-- Navbar -->
 
   <!-- Full Page Intro -->
-  <div class="view" style="background-image: url('media/company2022-web.jpg'); opacity: 0.9; background-repeat: no-repeat; background-size: cover;">
+  <div class="view" style="background-image: url('media/IMG_4217-2.JPG'); opacity: 0.9; background-repeat: no-repeat; background-size: cover;">
 
     <!-- Mask & flexbox options-->
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -243,159 +282,339 @@ h1 {
             <div class="row">
               <div class="column">
               <div class="grow">
-                  <img data-echo="media/Posters22/patrick.jpg" style="width:100%">
-                  <div class="name">Patrick Huang '22</div>
-
+                <div class ="namecontainer">
+                  <img src="media/peopleFall22/Abigail_edit.jpg" style="width:100%">
+                  <div class="overlay overlay-blur">
+                    <div class="name">Abigail Brown '24</div>
+                    <div class="position">President</div>
+                  </div>
+                </div>
               </div>
               </div>
               <div class="column">
               <div class="grow">
-                  <img data-echo="media/Posters22/sandy.jpg" style="width:100%">
-                  <div class="name">Sandy Yang '22</div>
-
+                <div class ="namecontainer">
+                  <img src="media/peopleFall22/Cynthia_edit.jpg" style="width:100%">
+                  <div class="overlay">
+                    <div class="name">Cynthia Makachi '24</div>
+                    <div class="position">Vice President</div>
+                  </div>
+                </div>
               </div>
               </div>
               <div class="column">
               <div class="grow">
-                  <img data-echo="media/Posters22/eric.jpg" style="width:100%">
-                  <div class="name">Eric Chen '22</div>
+                <div class ="namecontainer">
+                  <img src="media/peopleFall22/Grace_edit.jpg" style="width:100%">
+                  <div class="overlay">
+                    <div class="name">Grace Kim '23</div>
+                    <div class="position">Artistic Director</div>
+                  </div>
+                </div>
               </div>
               </div>
               <div class="column">
                 <div class="grow">
-                    <img data-echo="media/Posters22/emily.jpg" style="width:100%">
-                    <div class="name">Emily Yue '22</div>
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Michelle_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Michelle Huang '24</div>
+                      <div class="position">Assistant Artistic Director</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="column">
                 <div class="grow">
-                    <img data-echo="media/Posters22/rachel.jpg" style="width:100%">
-                    <div class="name">Rachel Chen '22</div>
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Unknown_person.jpeg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Le'Naya Wilkerson '25</div>
+                      <div class="position">Assistant Artistic Director</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="column">
                 <div class="grow">
-                    <img data-echo="media/Posters22/doris.jpg" style="width:100%">
-                    <div class="name">Doris Li '22</div>
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Unknown_person.jpeg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Bryan Wang '24</div>
+                      <div class="position">Publicity Chair</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/christina.jpg" style="width:100%">
-                  <div class="name">Christina Moon '22</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/mina.jpg" style="width:100%">
-                  <div class="name">Mina Lee '22</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/josh.jpg" style="width:100%">
-                  <div class="name">Joshua Ku '22</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Tiffany_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Tiffany Deane '24</div>
+                      <div class="position">Tech Chair</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/grace.jpg" style="width:100%">
-                  <div class="name">Grace Kim '23</div>
-                  <div class="position">Artistic Director</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/irene.jpg" style="width:100%">
-                  <div class="name">Irene Kim '23</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Kaitlee_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Kaitlee Ornelas '23</div>
+                      <div class="position">Costumes/Gear Chair</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/tracie.jpg" style="width:100%">
-                  <div class="name">Tracie Kwon '23</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/kaitlee.jpg" style="width:100%">
-                  <div class="name">Kaitlee Ornelas '23</div>
-                  <div class="position">Costumes Chair</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Zoey_Edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Zoey Zhang '23</div>
+                      <div class="position">Treasurer</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/richard.jpg" style="width:100%">
-                  <div class="name">Richard Qiu '23</div>
-                  <div class="position">Social Chair</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/michelle.jpg" style="width:100%">
-                  <div class="name">Michelle Wang '23</div>
-                  <div class="position">Social Chair</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Jonathan24_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Jonathan Lee '24</div>
+                      <div class="position">Social Chair</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/zoey.jpg" style="width:100%">
-                  <div class="name">Zoey Zhang '23</div>
-                  <div class="position">Treasurer</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/abigail.jpg" style="width:100%">
-                  <div class="name">Abigail Brown '24</div>
-                  <div class="position">President</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Richard_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Richard Qiu '23</div>
+                      <div class="position">Social Chair</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/genie.jpg" style="width:100%">
-                  <div class="name">Genie Choi '24</div>
-                  <div class="position">Publicity Chair</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/cynthia.jpg" style="width:100%">
-                  <div class="name">Cynthia Makachi '24</div>
-                  <div class="position">Vice President</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Michelle23_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Michelle Wang '23</div>
+                      <div class="position">Social Chair</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/bryan.jpg" style="width:100%">
-                  <div class="name">Bryan Wang '24</div>
-                  <div class="position">Publicity Chair</div>
-              </div>
-              </div>
-              <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/annie.jpg" style="width:100%">
-                  <div class="name">Annie Liu '25</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Katherine26_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Katherine Awad '26</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/tinney.jpg" style="width:100%">
-                  <div class="name">Tinney Mak '25</div>
-              </div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Joy_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Joy Cho '24</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="column">
-              <div class="grow">
-                  <img data-echo="media/Posters22/le_naya.jpg" style="width:100%">
-                  <div class="name">Le'Naya Wilkerson '25</div>
-                  <div class="position">Assistant Artistic Director</div>
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Osvaldo_edit-Edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Osvaldo Flores '25</div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Oleg_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Oleg Golev '22</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </div>
-          </div>
-          </div>
-
-
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Breanna_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Breanna Goyea '23</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Xuanying_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Xuanying Hua '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Michael_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Michael Huang '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Katherine24_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Katherine Jin '24</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Heather_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Heather Jung '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer"></div>
+                    <img src="media/peopleFall22/Irene_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Irene Kim '23</div>
+                    </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Tracie_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Tracie Kwon '23</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Khoa_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Khoa Le '24</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Jonathan26_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Jonathan Lee '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Jocelyn_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Jocelyn Lee '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Tinney_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Tinney Mak '25</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Stephanie_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Stephanie Oh '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Naomi_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Naomi Oke '23</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Soraya_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Soraya Patterson '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Mackenzie_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Mackenzie Slagle '25</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="grow">
+                  <div class ="namecontainer">
+                    <img src="media/peopleFall22/Jessica_edit.jpg" style="width:100%">
+                    <div class="overlay">
+                      <div class="name">Jessica Waters '26</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
+        </section>
     </div>
   </main>
   <!--Main layout-->
